@@ -1,0 +1,1 @@
+This is a simple game of rock-paper-scissors to be played against a computer

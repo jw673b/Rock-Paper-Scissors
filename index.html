@@ -1,18 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="reset.css" media="all">
     <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="reset.css" media="all">
+    <script type="text/javascript" src ="game.js"></script>
+
+    <style>
+        body {
+            background-color:lightblue;
+        }
+        .viewport {
+            text-align:center;
+        }
+        .pageTitle {
+            margin-top: 50px;
+            position:relative;
+            font-size:32px;
+            color:black;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        #startGame {
+            position: relative;
+            width: 300px;
+            height: 75px;
+            color:black;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 22px;
+            margin-top: 300px;
+            background-color: cornsilk;
+            border-radius: 15px;
+        }
+
+        #startGame:hover {
+            transition-duration: 0.3s;
+            transform: scale(1.1);
+        }
+
+        
+
+    </style>
 </head>
-
 <body>
-    <h1>Rock Paper Scissors</h1>
+<div class="viewport"> 
+    <h1 class="pageTitle">Rock Paper Scissors</h1>
 
-<script>
-    function computerPlay() {
-        let gameChoices = ['Rock', 'Paper', 'Scissors'];
-        return gameChoices[Math.floor(Math.random()*gameChoices.length)]
-    }       
-</script>
+    <form>
+        <button id="startGame" onclick="playGame()">Click here to start game</button>
+    </form>
+</div>
 </body>
 </html>

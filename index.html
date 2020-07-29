@@ -4,52 +4,84 @@
     <title>Rock Paper Scissors</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="reset.css" media="all">
-    <script type="text/javascript" src ="game.js"></script>
-
+    <!-- <link rel="stylesheet" type="text/css" href="reset.css" media="all"> -->
     <style>
         body {
-            background-color:lightblue;
+            background-image: url("Krossroads-background.png");
+            font-family:"Trebuchet MS", Helvetica, sans-serif;
         }
         .viewport {
             text-align:center;
         }
         .pageTitle {
-            margin-top: 50px;
+            margin: 50px 35% 0px 35%;
             position:relative;
-            font-size:32px;
-            color:black;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size:50px;
+            color: white;
+            background-color: black;
         }
-        
-        #startGame {
+        img {
             position: relative;
-            width: 300px;
-            height: 75px;
-            color:black;
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            font-size: 22px;
-            margin-top: 300px;
-            background-color: cornsilk;
-            border-radius: 15px;
+            width: 125px;
+            height: auto;
+            margin-top:8%;
+            margin-left: 30px;
+            transition:all 1s;
         }
-
-        #startGame:hover {
+        img:hover {
             transition-duration: 0.3s;
             transform: scale(1.1);
+            z-index: 3000;
+            border-color: #ffc600;
+            box-shadow: 0 0 1rem #ffc600;
+            border-width: 3px;
         }
 
+        .playing {
+            transform: scale(1.1);
+            border-color: #ffc600;
+            box-shadow: 0 0 1rem #ffc600;
+            border-width: 3px;
+        }  
         
+        #counterbox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-size: 20px;
+        }
+        #counterbox p:first-child {
+            display: block;
+            margin-left: 70%;
+            color:white;
+            background-color: rgb(10, 10, 121);
+        }
+        #counterbox p:last-child {
+            display: block;
+            margin-right: 70%;
+            color: white;
+            background-color: rgb(78, 10, 10);
+        }
 
     </style>
 </head>
 <body>
 <div class="viewport"> 
     <h1 class="pageTitle">Rock Paper Scissors</h1>
-
-    <form>
-        <button id="startGame" onclick="playGame()">Click here to start game</button>
-    </form>
+    <div id = "counterbox">
+        <p class = "counter">Player: 0</p>
+        <p class = "counter">Computer: 0</p>
+    </div>
+        <img id="rock" alt="Rock" src="rock.png"></img>
+        <img id="paper" alt = "Paper" src="paper.png"></img>
+        <img id="scissors" alt = "Scissors" src="scissors.png"></img>
 </div>
+<!-- attribution for rock paper scissors images-->
+<a href="https://www.vecteezy.com/free-vector/paper-sheet">Paper Sheet Vectors by Vecteezy</a>
+<!-- Audio -->
+<audio src="rock.wav" id="rockAudio"></audio>
+<audio src="paper.wav" id="paperAudio"></audio>
+<audio src="scissors.wav" id="scissorsAudio"></audio>
+<!--Game script-->
+<script type="text/javascript" src ="gamev2.js"></script>
 </body>
 </html>

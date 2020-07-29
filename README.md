@@ -1,1 +1,2 @@
-This is a simple game of rock-paper-scissors to be played against a computer
+This is a simple game of rock-paper-scissors to be played against a computer.
+You can click a button to begin a best of 5 game. If you win, you get a point. If the computer wins, it gets a point. The one with the most points after 5 rounds wins. (Ties are possible)

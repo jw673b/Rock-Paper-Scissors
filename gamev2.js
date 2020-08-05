@@ -51,6 +51,9 @@ function playRound(player,computer) {
             computer === 'rock' ? 1:
             -1
         }
+        result === 0 ? alert(`The computer chose ${computer}, you tied!`):
+        result === 1 ? alert(`The computer chose ${computer}, you won!`):
+        alert(`The computer chose ${computer}, you lost!`)
          return result;
 }
 
